@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name the countries quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="nameCountries.css" rel="stylesheet">
+</head>
+<body>
+    <button onclick="showWorld()" id="showWorld">View image of world map</button>
+    <img src="world-countries-pale.gif" alt="World Map" id="map">
+    <a href="https://lizardpoint.com/geography/images/maps/world-countries-pale.gif" target="_blank" id="opennewtab">Open image in new tab</a>
+    <header>
+        <h1>Can you name all 195 countries in the world?</h1>
+    </header>
+    <div id="e">
+        <button type="button" id="startGame" onclick="startGame()">Start Game</button>
+    </div>
+    <form id="inputs">
+        <input type="text" id="countryinput" autocomplete="off">
+        <input type="submit">
+        <button type="button" onclick="giveUp()">Give Up</button>
+    </form>
+    <p class="e">Capitilization is not required. Once you type the name, press the enter key or press the submit button. Up to one space before and/or after the country name is accepted. Spaces in between multi-word countries are required. The computer will not be able to tell you if you're done or not.</p>
+    <section id="allCountries">
+        <div>
+            <h3 class="notDRC" id="afghanistan">Afghanistan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="albania">Albania</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="algeria">Algeria</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="andorra">Andorra</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="angola">Angola</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="antiguabarbuda">Antigua and Barbuda</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="argentina">Argentina</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="armenia">Armenia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="australia">Australia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="austria">Austria</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="azerbaijan">Azerbaijan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bahamas">The Bahamas</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bahrain">Bahrain</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bangladesh">Bangladesh</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="barbados">Barbados</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="belarus">Belarus</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="belgium">Belgium</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="belize">Belize</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="benin">Benin</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bhutan">Bhutan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bolivia">Bolivia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bosniaHerzegovina">Bosnia and Herzegovina</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="botswana">Botswana</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="brazil">Brazil</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="brunei">Brunei</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="bulgaria">Bulgaria</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="burkinafaso">Burkina Faso</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="burundi">Burundi</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="cambodia">Cambodia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="cameroon">Cameroon</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="canada">Canada</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="capeVerde">Cape Verde</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="CAR">Central African Republic</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="chad">Chad</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="chile">Chile</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="china">China</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="colombia">Colombia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="comoros">Comoros</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="repCongo">Republic of the Congo</h3>
+        </div>
+        <div>
+            <h3 id="drc">Democratic Republic of the Congo</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="costaRica">Costa Rica</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="ivoryCoast">Côte d'Ivoire</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="croatia">Croatia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="cuba">Cuba</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="cyprus">Cyprus</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="czech">Czechia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="denmark">Denmark</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="djibouti">Djibouti</h3>
+        </div><div>
+            <h3 class="notDRC" id="dominica">Dominica</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="dominicanRepublic">Dominican Republic</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="ecuador">Ecuador</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="egypt">Egypt</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="elSalvador">El Salvador</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="equatorialGuinea">Equatorial Guinea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="eritrea">Eritrea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="estonia">Estonia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="eswatini">Eswatini</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="ethiopia">Ethiopia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="fiji">Fiji</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="finland">Finland</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="france">France</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="gabon">Gabon</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="gambia">The Gambia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="georgia">Georgia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="germany">Germany</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="ghana">Ghana</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="greece">Greece</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="grenada">Grenada</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="guatemala">Guatemala</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="guinea">Guinea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="guineaBissau">Guinea-Bissau</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="guyana">Guyana</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="haiti">Haiti</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="honduras">Honduras</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="hungary">Hungary</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="iceland">Iceland</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="india">India</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="indonesia">Indonesia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="iran">Iran</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="iraq">Iraq</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="LilyLand">Ireland</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="israel">Israel</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="italy">Italy</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="jamaica">Jamaica</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="japan">Japan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="jordan">Jordan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="kazakhstan">Kazakhstan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="kenya">Kenya</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="kiribati">Kiribati</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="kuwait">Kuwait</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="kyrgyzstan">Kyrgyzstan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="laos">Laos</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="latvia">Latvia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id='lebanon'>Lebanon</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="lesotho">Lesotho</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="liberia">Liberia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="libya">Libya</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="liechtenstein">Liechtenstein</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="lithuania">Lithuania</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="luxembourg">Luxembourg</h3>
+        </div><div>
+            <h3 class="notDRC" id="madagascar">Madagascar</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="malawi">Malawi</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="malaysia">Malaysia</h3>
+        </div>
+        <div> 
+            <h3 class="notDRC" id="maldives">Maldives</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mali">Mali</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="malta">Malta</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="marshallislands">Marshall Islands</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mauritania">Mauritania</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mauritius">Mauritius</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mexico">Mexico</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="micronesia">Micronesia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="moldova">Moldova</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="monaco">Monaco</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mongolia">Mongolia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="montenegro">Montenegro</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="morocco">Morocco</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="mozambique">Mozambique</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="myanmar">Myanmar</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="namibia">Namibia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nauru">Nauru</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nepal">Nepal</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="netherlands">Netherlands</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="newZealand">New Zealand</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nicaragua">Nicaragua</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="niger">Niger</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nigeria">Nigeria</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nKorea">North Korea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="nMacedonia">North Macedonia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="norway">Norway</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="oman">Oman</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="pakistan">Pakistan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="palau">Palau</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="palestine">Palestine</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="panama">Panama</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="png">Papua New Guinea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="paraguay">Paraguay</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="peru">Peru</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="philippines">Philippines</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="poland">Poland</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="portugal">Portugal</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="qatar">Qatar</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="romania">Romania</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="russia">Russia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="rwanda">Rwanda</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="samoa">Samoa</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sanMarino">San Marino</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="saoTomePrincipe">São Tomé and Príncipe</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="saudiArabia">Saudi Arabia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="senegal">Senegal</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="serbia">Serbia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="seychelles">Seychelles</h3>
+        </div><div>
+            <h3 class="notDRC" id="sierraLeone">Sierra Leone</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="singapore">Singapore</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="slovakia">Slovakia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="slovenia">Slovenia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="solomonislands">Solomon Islands</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="somalia">Somalia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sAfrica">South Africa</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sKorea">South Korea</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sSudan">South Sudan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="spain">Spain</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sriLanka">Sri Lanka</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="saintKittsNevis">Saint Kitts and Nevis</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="stLucia">Saint Lucia</h3>
+        </div>
+        <div>
+            <h3 id="stVincent">Saint Vincent and the Grenadines</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sudan">Sudan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="suriname">Suriname</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="sweden">Sweden</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="switzerland">Switzerland</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="syria">Syria</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="tajikistan">Tajikistan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="tanzania">Tanzania</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="thailand">Thailand</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="timorLeste">Timor-Leste</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="togo">Togo</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="tonga">Tonga</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="trinidadTobago">Trinidad and Tobago</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="tunisia">Tunisia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="turkey">Turkey</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="turkmenistan">Turkmenistan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="tuvalu">Tuvalu</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="uganda">Uganda</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="ukraine">Ukraine</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="uae">United Arab Emirates</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="uk">United Kingdom</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="usa">United States of America</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="uruguay">Uruguay</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="uzbekistan">Uzbekistan</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="vanuatu">Vanuatu</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="vatican">Vatican City</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="venezuela">Venezuela</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="vietnam">Vietnam</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="yemen">Yemen</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="zambia">Zambia</h3>
+        </div>
+        <div>
+            <h3 class="notDRC" id="zimbabwe">Zimbabwe</h3>
+        </div>
+    </section>
+    <footer>
+        <h4>IMPORTANT NOTE: A country here is defined by its status in the UN. This quiz counts the member states and the non-member observer states.</h4>
+        <button onclick="asdfghjkl()" id="wahwah">x</button>
+    </footer>
+    <!-- <button onclick="cheatcheatlol()">cheatcheat lol</button> -->
+<script src="nameCountries.js"></script>
+</body>
+</html>
